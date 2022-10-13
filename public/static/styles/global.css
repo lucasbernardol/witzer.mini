@@ -1,0 +1,54 @@
+:root {
+  --color-background: #060607;
+
+  --color-darken: #151518;
+  --color-border-darken: #202024;
+
+  --color-text: #f0f0f5;
+  --color-text-darken: #404041;
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  outline: none;
+  border: none;
+
+  color: var(--color-text);
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem; /** 16px */
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+.screen-reader {
+  width: 0;
+  padding: 0;
+
+  opacity: 0;
+  visibility: hidden;
+
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+
+  font-size: 0px;
+}

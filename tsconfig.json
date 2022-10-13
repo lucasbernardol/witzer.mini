@@ -12,10 +12,10 @@
     "rootDir": "./src",
     "baseUrl": "./src",
     "paths": {
-      "@controllers/*": ["api/controllers/*"],
-      "@facotries/*": ["api/factories/*"],
-      "@routes/*": ["api/routes/*"],
-      "@utils/*": ["api/utils/*"]
+      "@controllers/*": ["app/controllers/*"],
+      "@factories/*": ["app/factories/*"],
+      "@routes/*": ["app/routes/*"],
+      "@utils/*": ["app/utils/*"]
     },
 
     "typeRoots": ["./node_modules/@types", "./src/@types"],

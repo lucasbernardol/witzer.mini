@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/pages/home.css" />
+
+    <title>Witzer.dev | Encurdator de URL's</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="main-container">
+        <div class="shortenner">
+          <header class="shortenner__header">
+            <h1 class="shortenner__title">
+              Witzer<span class="title-dot">.</span>dev
+            </h1>
+
+            <p class="shortener__text">
+              Encurte seus links através da sua plataforma. É fácil, rápido e
+              seguro.
+            </p>
+          </header>
+
+          <form action="/" class="shortener__form" method="POST">
+            <fieldset>
+              <legend class="screen-reader">Criar URL</legend>
+
+              <div class="input-group">
+                <label for="original">Endereço ou URL</label>
+                <input
+                  id="original"
+                  tabindex="1"
+                  type="text"
+                  name="original"
+                  placeholder="url: https://www.google.com"
+                  maxlength="2048"
+                  required
+                  autofocus
+                />
+              </div>
+            </fieldset>
+
+            <button type="submit" class="button">Enviar</button>
+          </form>
+        </div>
+      </main>
+
+      <footer class="fotter-container">
+        <h2>Links</h2>
+      </footer>
+    </div>
+  </body>
+</html>
