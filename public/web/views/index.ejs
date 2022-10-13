@@ -12,8 +12,19 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/pages/home.css" />
+
+    <link rel="stylesheet" href="/styles/components/modal.component.css" />
+    <link rel="stylesheet" href="/styles/components/copy.component.css" />
+    <link rel="stylesheet" href="/styles/components/destroy.component.css" />
+
+    <script defer src="/scripts/main.js" type="text/javascript"></script>
 
     <title>Witzer.dev | Encurdator de URL's</title>
   </head>
@@ -32,17 +43,20 @@
             </p>
           </header>
 
-          <form action="/" class="shortener__form" method="POST">
+          <form action="/shortenings" class="shortener__form" method="POST">
             <fieldset>
               <legend class="screen-reader">Criar URL</legend>
 
               <div class="input-group">
-                <label for="original">Endereço ou URL</label>
+                <!-- 
+                <label for="original" class="screen-reader">
+                  Endereço ou URL
+                </label>  -->
                 <input
                   id="original"
                   tabindex="1"
                   type="text"
-                  name="original"
+                  name="original_url"
                   placeholder="url: https://www.google.com"
                   maxlength="2048"
                   required
@@ -60,5 +74,9 @@
         <h2>Links</h2>
       </footer>
     </div>
+
+    <!-- Modal -->
+    <!-- prettier-ignore -->
+    <%- include('./components/modal.ejs', { href: 'https://www.google.com/?q=Node.js&version=available_v18' }) %>
   </body>
 </html>

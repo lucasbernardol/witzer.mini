@@ -24,7 +24,7 @@ export class MainConttroller {
 
   async root(request: Request, response: Response, next: NextFunction) {
     try {
-      return response.render('index');
+      return response.render('index', { href: null });
     } catch (error) {
       return next(error);
     }

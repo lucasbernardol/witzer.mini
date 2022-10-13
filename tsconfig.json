@@ -15,7 +15,8 @@
       "@controllers/*": ["app/controllers/*"],
       "@factories/*": ["app/factories/*"],
       "@routes/*": ["app/routes/*"],
-      "@utils/*": ["app/utils/*"]
+      "@utils/*": ["app/utils/*"],
+      "@prisma/*": ["prisma/*"]
     },
 
     "typeRoots": ["./node_modules/@types", "./src/@types"],

@@ -1,0 +1,17 @@
+<section class="modal-overlay" data-id="copy-modal">
+  <div class="modal-content">
+    <header class="modal__header">
+      <h2 class="modal__title">Copiar endereço</h2>
+    </header>
+
+    <section class="modal-copy">
+      <!-- prettier-ignore -->
+      <output class="output" data-id="output" title="<%= href %>"><%= href %></output>
+
+      <!-- prettier-ignore -->
+      <%- include('./copy.component.ejs', { title: 'Copiar endereço URL', id: 'copy-button' }) %>
+    </section>
+
+    <%- include('./destroy.component.ejs', { title: 'Sair' }) %>
+  </div>
+</section>
