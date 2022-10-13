@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "composite": true,
+    "tsBuildInfoFile": ".tsbuildinfo",
+    "target": "ES2018",
+    "module": "commonjs",
+    "lib": ["ES6"],
+    "allowJs": true,
+    "checkJs": false,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "paths": {
+      "@controllers/*": ["api/controllers/*"],
+      "@facotries/*": ["api/factories/*"],
+      "@routes/*": ["api/routes/*"],
+      "@utils/*": ["api/utils/*"]
+    },
+
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
+
+    "isolatedModules": false,
+    "removeComments": true,
+
+    "strict": true,
+    "skipLibCheck": false,
+    "strictPropertyInitialization": false,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["dist/**/*", "node_modules/**/*"]
+}
