@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR" translate="yes">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/pages/sharing.css" />
+    <link rel="stylesheet" href="/styles/components/spinner.component.css" />
+
+    <script src="/scripts/sharing.js" type="text/javascript" defer></script>
+
+    <title>Aguarde: <%= hash ?? '' %></title>
+  </head>
+  <body data-hash="<%= hash ?? '' %>">
+    <div class="application-wrapper" data-id="wrapper">
+      <div class="spinner-container">
+        <%- include('./components/spinner.component.ejs') %>
+      </div>
+
+      <a data-id="anchor-ref" class="screen-reader" target="_self"></a>
+    </div>
+  </body>
+</html>

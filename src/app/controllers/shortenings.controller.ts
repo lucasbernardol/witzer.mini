@@ -50,4 +50,29 @@ export class ShorteningConttroller {
       return next(error);
     }
   }
+
+  async renderSharing(request: Request, response: Response) {
+    const { hash } = request.params as { hash: string };
+
+    return response.render('sharing', { hash });
+  }
+
+  async sharing(request: Request, response: Response, next: NextFunction) {
+    try {
+      const { hash } = request.params as { hash: string };
+
+      const shortening = await client.shortenings.findUnique({
+        where: {
+          hash,
+        },
+        select: {
+          original_url: true,
+        },
+      });
+
+      return response.json({ href: shortening?.original_url ?? null });
+    } catch (error) {
+      return next(error);
+    }
+  }
 }

@@ -1,13 +1,29 @@
 :root {
-  --color-background: #060607;
+  --color-background: #0b0b0c;
 
-  --color-darken: #151518;
-  --color-border-darken: #202024;
+  --color-dark: #121214;
+  --color-dark-secondary: #202024;
+  --color-dark-secondary-hover: #29292e;
 
-  --color-text: #f0f0f5;
-  --color-text-darken: #404041;
+  --color-primary: #6e3cbc;
+  --color-primary-hover: #5a2fa0;
+
+  --color-text: #e1e1e6;
+  --color-text-dark: #767676;
+
+  --color-white: #ffffff;
+  --color-line: #252529;
+  --color-line-light: rgba(37, 37, 41, 0.6);
+  --color-red: rgb(216, 42, 42);
+
+  --color-notifier-enabled: rgb(10, 185, 77);
+  --color-notifier-disabled: rgb(196, 30, 30);
 
   font-size: 62.5%;
+}
+
+*::selection {
+  background-color: rgba(74, 113, 230, 0.3);
 }
 
 * {
@@ -55,4 +71,37 @@ body {
   -webkit-user-drag: none;
 
   font-size: 0px;
+}
+
+img,
+i {
+  user-select: none;
+  pointer-events: none;
+
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+img {
+  object-fit: cover;
+  -o-object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 56.2%;
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    font-size: 52%;
+  }
+}
+
+input::placeholder {
+  user-select: none;
 }

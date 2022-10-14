@@ -1,7 +1,15 @@
-<section class="modal-overlay" data-id="copy-modal">
+<section
+  class="modal-overlay <%= hidden ? 'hidden' : '' %>"
+  data-id="modal-copy"
+>
+  <h2 class="screen-reader">Parabéns copie a sua URL encurtada.</h2>
   <div class="modal-content">
-    <header class="modal__header">
-      <h2 class="modal__title">Copiar endereço</h2>
+    <header class="modal-header">
+      <h2 class="modal-header__title">Copiar URL</h2>
+      <span class="modal-header__text">
+        Parabéns. Copie e salve a URL encurtada com você. Para utilizar abra uma
+        nova guia.
+      </span>
     </header>
 
     <section class="modal-copy">
@@ -9,9 +17,22 @@
       <output class="output" data-id="output" title="<%= href %>"><%= href %></output>
 
       <!-- prettier-ignore -->
-      <%- include('./copy.component.ejs', { title: 'Copiar endereço URL', id: 'copy-button' }) %>
+      <%- include('./copy.component.ejs', { 
+          id: 'button-copy',
+          title: 'Copiar endereço URL', 
+        }) 
+      %>
     </section>
 
-    <%- include('./destroy.component.ejs', { title: 'Sair' }) %>
+    <footer class="modal-footer">
+      <button
+        title="Sair ou fechar janela"
+        type="button"
+        class="modal-footer__button"
+        data-id="modal-destroy"
+      >
+        Sair
+      </button>
+    </footer>
   </div>
 </section>

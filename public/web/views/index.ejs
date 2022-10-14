@@ -22,14 +22,20 @@
 
     <link rel="stylesheet" href="/styles/components/modal.component.css" />
     <link rel="stylesheet" href="/styles/components/copy.component.css" />
-    <link rel="stylesheet" href="/styles/components/destroy.component.css" />
 
+    <% if (href) { %>
+    <!-- Modal script -->
     <script defer src="/scripts/main.js" type="text/javascript"></script>
+    <% } %>
 
-    <title>Witzer.dev | Encurdator de URL's</title>
+    <title>Witzer.io | Encurdator de URL's seguro e fácil de usar.</title>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="application-wrapper">
+      <header class="header-container">
+        <p class="header__version">Versão 1.0</p>
+      </header>
+
       <main class="main-container">
         <div class="shortenner">
           <header class="shortenner__header">
@@ -37,9 +43,13 @@
               Witzer<span class="title-dot">.</span>dev
             </h1>
 
-            <p class="shortener__text">
-              Encurte seus links através da sua plataforma. É fácil, rápido e
+            <p class="shortener__text" title="Witzer.dev: about us">
+              Encurte seus links através da plataforma witzer. É fácil, rápido e
               seguro.
+
+              <span class="shortener-text__security">
+                Não salvamos dados de sigilosos ou algo que pode rastrear você.
+              </span>
             </p>
           </header>
 
@@ -48,24 +58,26 @@
               <legend class="screen-reader">Criar URL</legend>
 
               <div class="input-group">
-                <!-- 
-                <label for="original" class="screen-reader">
-                  Endereço ou URL
-                </label>  -->
                 <input
                   id="original"
+                  type="url"
+                  title="Digite uma URL válida"
                   tabindex="1"
-                  type="text"
                   name="original_url"
-                  placeholder="url: https://www.google.com"
+                  placeholder="https://www.google.com"
                   maxlength="2048"
                   required
                   autofocus
+                  autocomplete="off"
                 />
+
+                <div class="link-icon">
+                  <img src="/assets/link.svg" alt="Link svg icon" />
+                </div>
               </div>
             </fieldset>
 
-            <button type="submit" class="button">Enviar</button>
+            <button class="button" type="submit">Encurtar</button>
           </form>
         </div>
       </main>
@@ -75,8 +87,13 @@
       </footer>
     </div>
 
-    <!-- Modal -->
     <!-- prettier-ignore -->
-    <%- include('./components/modal.ejs', { href: 'https://www.google.com/?q=Node.js&version=available_v18' }) %>
+    <% if (href) { %>
+      <%- include('./components/modal.ejs', {
+          hidden: false, 
+          href, 
+        }) 
+      %>
+    <% } %>
   </body>
 </html>

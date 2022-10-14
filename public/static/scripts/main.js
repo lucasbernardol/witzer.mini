@@ -1,8 +1,8 @@
-const DOMModalElement = document.querySelector('[data-id="copy-modal"]');
-const DOMDestroyElement = document.querySelector('[data-id="destroy-button"]');
+const DOMModalElement = document.querySelector('[data-id="modal-copy"]');
+const DOMDestroyElement = document.querySelector('[data-id="modal-destroy"]');
 
 const DOMOutputElement = document.querySelector('[data-id="output"]');
-const DOMCopyButtonElement = document.querySelector('[data-id="copy-button"]');
+const DOMCopyButtonElement = document.querySelector('[data-id="button-copy"]');
 
 const HIDDEN_CLASSNAME = 'hidden';
 
