@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" translate="yes">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,80 +11,117 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
 
-    <link rel="stylesheet" href="/styles/global.css" />
-    <link rel="stylesheet" href="/styles/pages/home.css" />
+    <link rel="stylesheet" href="/styles/global.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/wrapper.css" type="text/css" />
+
+    <link rel="stylesheet" href="/styles/pages/home.css" type="text/css" />
 
     <link rel="stylesheet" href="/styles/components/modal.component.css" />
     <link rel="stylesheet" href="/styles/components/copy.component.css" />
 
     <% if (href) { %>
-    <!-- Modal script -->
     <script defer src="/scripts/main.js" type="text/javascript"></script>
     <% } %>
 
-    <title>Witzer.io | Encurdator de URL's seguro e fácil de usar.</title>
+    <title>Witzer.io | Encurdator de URL's</title>
   </head>
   <body>
-    <div class="application-wrapper">
-      <header class="header-container">
-        <p class="header__version">Versão 1.0</p>
-      </header>
+    <div class="application-wrapper" data-id="wrapper">
+      <div class="home-layout">
+        <header class="home-header">
+          <p class="home-header__version" title="Witzer.dev version 1.0 - MVP">
+            Versão 1.0
+          </p>
+        </header>
 
-      <main class="main-container">
-        <div class="shortenner">
-          <header class="shortenner__header">
-            <h1 class="shortenner__title">
-              Witzer<span class="title-dot">.</span>dev
-            </h1>
+        <section class="home-shortener">
+          <h2 class="screen-reader">
+            Witzer.dev encurte suas URL's na sessão abaixo
+          </h2>
 
-            <p class="shortener__text" title="Witzer.dev: about us">
-              Encurte seus links através da plataforma witzer. É fácil, rápido e
-              seguro.
+          <div class="shortenner-content">
+            <div class="shortenner-content__left">
+              <h1 class="shortenner-content__title">
+                Witzer<span class="title-dot">.</span>dev
+              </h1>
 
-              <span class="shortener-text__security">
-                Não salvamos dados de sigilosos ou algo que pode rastrear você.
-              </span>
-            </p>
-          </header>
+              <p class="shortener-content__text" title="Witzer.dev: about us">
+                Encurte seus links através da plataforma witzer. É fácil, rápido
+                e seguro.
 
-          <form action="/shortenings" class="shortener__form" method="POST">
-            <fieldset>
-              <legend class="screen-reader">Criar URL</legend>
+                <span class="shortener-content__security">
+                  Não salvamos dados de sigilosos ou algo que pode rastrear
+                  você.
+                </span>
+              </p>
+            </div>
 
-              <div class="input-group">
-                <input
-                  id="original"
-                  type="url"
-                  title="Digite uma URL válida"
-                  tabindex="1"
-                  name="original_url"
-                  placeholder="https://www.google.com"
-                  maxlength="2048"
-                  required
-                  autofocus
-                  autocomplete="off"
+            <div class="shortener-content__right">
+              <form
+                action="/shortenings"
+                class="shortener-content__form"
+                method="POST"
+              >
+                <fieldset class="shortener-content__form__fields">
+                  <legend class="shortener-content__form__title">
+                    Criar endereço
+                  </legend>
+
+                  <div class="group">
+                    <label for="original" class="screen-reader">
+                      Endereço de e-mail
+                    </label>
+
+                    <div class="input-group">
+                      <input
+                        id="original"
+                        type="url"
+                        title="Digite uma URL válida"
+                        tabindex="1"
+                        name="original_url"
+                        placeholder="https://www.google.com"
+                        maxlength="2048"
+                        required
+                        autofocus
+                        autocomplete="off"
+                      />
+
+                      <div class="link-icon">
+                        <img src="/assets/svg/link.svg" alt="Link svg icon" />
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <button type="submit" class="shortenner__submit">
+                  Encurtar
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <footer class="home-footer">
+          <ul class="home-links">
+            <li class="home-links__item">
+              <a
+                href="https://github.com/lucasbernardol/witzer.mini"
+                target="_blank"
+              >
+                <img
+                  src="/assets/svg/github.svg"
+                  alt="Github logo. See: https://github.com/logos"
                 />
-
-                <div class="link-icon">
-                  <img src="/assets/link.svg" alt="Link svg icon" />
-                </div>
-              </div>
-            </fieldset>
-
-            <button class="button" type="submit">Encurtar</button>
-          </form>
-        </div>
-      </main>
-
-      <footer class="fotter-container">
-        <h2>Links</h2>
-      </footer>
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </div>
     </div>
 
     <!-- prettier-ignore -->

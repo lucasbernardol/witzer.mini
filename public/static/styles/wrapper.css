@@ -1,0 +1,13 @@
+.application-wrapper {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 720px) {
+  .application-wrapper {
+    padding: 0 1.6rem;
+  }
+}

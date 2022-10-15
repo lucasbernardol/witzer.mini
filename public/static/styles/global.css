@@ -59,9 +59,23 @@ body {
   background-color: var(--color-background);
 }
 
+ul,
+ol {
+  list-style: none;
+}
+
 .screen-reader {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 9999;
+
   width: 0;
+  height: 0;
+
   padding: 0;
+  margin: 0;
 
   opacity: 0;
   visibility: hidden;
@@ -71,6 +85,13 @@ body {
   -webkit-user-drag: none;
 
   font-size: 0px;
+}
+
+.title-dot {
+  font-size: 4rem;
+  color: var(--color-primary);
+
+  line-height: 1;
 }
 
 img,
@@ -90,6 +111,10 @@ img {
   -o-object-fit: cover;
 }
 
+input::placeholder {
+  user-select: none;
+}
+
 @media (max-width: 1024px) {
   :root {
     font-size: 56.2%;
@@ -100,8 +125,4 @@ img {
   :root {
     font-size: 52%;
   }
-}
-
-input::placeholder {
-  user-select: none;
 }
