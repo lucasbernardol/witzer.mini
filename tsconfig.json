@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "incremental": true,
-    "composite": true,
+    "composite": false,
     "tsBuildInfoFile": ".tsbuildinfo",
     "target": "ES2018",
     "module": "commonjs",
