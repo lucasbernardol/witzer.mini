@@ -1,10 +1,11 @@
 import type { Request, Response, NextFunction } from 'express';
 import { nanoid } from 'nanoid';
 
-import { client } from '@prisma/prisma.client';
+import { DOMAIN } from '@config/env.config';
+import { client } from '@config/prisma.config';
 
 const href = (hash: string): string => {
-  return `http://localhost:3333/r/${hash}`;
+  return `${DOMAIN}/r/${hash}`;
 };
 
 /**
@@ -14,9 +15,8 @@ export class ShorteningConttroller {
   private static instance: ShorteningConttroller;
 
   /**
-   * @private constructir
+   * @private constructor
    */
-
   private constructor() {}
 
   static get(): ShorteningConttroller {

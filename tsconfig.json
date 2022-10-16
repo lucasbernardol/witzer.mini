@@ -12,11 +12,11 @@
     "rootDir": "./src",
     "baseUrl": "./src",
     "paths": {
+      "@config/*": ["config/*"],
       "@controllers/*": ["app/controllers/*"],
       "@factories/*": ["app/factories/*"],
       "@routes/*": ["app/routes/*"],
-      "@utils/*": ["app/utils/*"],
-      "@prisma/*": ["prisma/*"]
+      "@utils/*": ["app/utils/*"]
     },
 
     "typeRoots": ["./node_modules/@types", "./src/@types"],
