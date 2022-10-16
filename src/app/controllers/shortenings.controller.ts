@@ -54,7 +54,7 @@ export class ShorteningConttroller {
   async renderSharing(request: Request, response: Response) {
     const { hash } = request.params as { hash: string };
 
-    return response.render('sharing', { hash });
+    return response.render('loading', { hash });
   }
 
   async sharing(request: Request, response: Response, next: NextFunction) {

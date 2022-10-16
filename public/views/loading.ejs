@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR" translate="yes">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#121214" />
+    <meta name="msapplication-navbutton-color" content="#121214" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#121214" />
+    <meta name="author" content="José Lucas" />
+    <meta
+      name="keywords"
+      content="witzer.dev, witzer, encurtador, encurtador de URL's"
+    />
+    <meta
+      name="description"
+      content="Encurte seus links através da plataforma witzer. É fácil, rápido e seguro. 
+      Não salvamos dados de sigilosos ou algo que pode rastrear você."
+    />
+
+    <!-- Facebook/Open graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://witzer.onrender.com/" />
+    <meta property="og:title" content="Witzer.io | Encurdator de URL's" />
+    <meta
+      property="og:description"
+      content="Encurte seus links através da plataforma witzer. É fácil, rápido e seguro. 
+      Não salvamos dados de sigilosos ou algo que pode rastrear você."
+    />
+    <meta property="twitter:title" content="Witzer.io | Encurdator de URL's" />
+    <meta property="twitter:url" content="https://witzer.onrender.com/" />
+    <meta
+      property="twitter:description"
+      content="Encurte seus links através da plataforma witzer. É fácil, rápido e seguro. 
+      Não salvamos dados de sigilosos ou algo que pode rastrear você."
+    />
+
+    <!-- prettier-ignore -->
+    <link rel="shortcut icon"href="/assets/icons/favicon.svg"type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/assets/icons/favicon.svg" />
+
+    <link rel="stylesheet" href="/styles/global.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/wrapper.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/pages/loading.css" />
+    <link rel="stylesheet" href="/styles/components/loading.component.css" />
+
+    <script src="/scripts/sharing.js" type="text/javascript" defer></script>
+
+    <title>Witzer.dev | <%= hash %></title>
+  </head>
+  <body data-hash="<%= hash ?? '' %>">
+    <div class="application-wrapper" data-id="wrapper">
+      <div class="spinner-container">
+        <%- include('./components/loading.component.ejs') %>
+
+        <a class="screen-reader" target="_self" data-id="anchor-ref"></a>
+      </div>
+    </div>
+  </body>
+</html>

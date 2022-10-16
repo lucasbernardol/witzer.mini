@@ -4,6 +4,36 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#121214" />
+    <meta name="msapplication-navbutton-color" content="#121214" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#121214" />
+    <meta name="author" content="José Lucas" />
+    <meta
+      name="keywords"
+      content="witzer.dev, witzer, encurtador, encurtador URL's, público, URLs"
+    />
+    <meta
+      name="description"
+      content="Encurte seus links através da plataforma witzer. É fácil, rápido e seguro. 
+      Não salvamos dados de sigilosos ou algo que pode rastrear você."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://witzer.onrender.com/" />
+    <meta property="og:title" content="Witzer.io | Encurdator de URL's" />
+    <meta
+      property="og:description"
+      content="Encurte seus links através da plataforma witzer. É fácil, rápido e seguro. 
+      Não salvamos dados de sigilosos ou algo que pode rastrear você."
+    />
+    <meta property="twitter:title" content="Witzer.io | Encurdator de URL's" />
+    <meta property="twitter:url" content="https://witzer.onrender.com/" />
+    <meta
+      property="twitter:description"
+      content="Encurte seus links através da plataforma witzer. É fácil, rápido e seguro. 
+      Não salvamos dados de sigilosos ou algo que pode rastrear você."
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,16 +41,15 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
+
+    <!-- prettier-ignore -->
+    <link rel="shortcut icon"href="/assets/icons/favicon.svg"type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="/assets/icons/favicon.svg" />
 
     <link rel="stylesheet" href="/styles/global.css" type="text/css" />
     <link rel="stylesheet" href="/styles/wrapper.css" type="text/css" />
 
-    <link rel="stylesheet" href="/styles/pages/home.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/pages/home.css" />
     <link rel="stylesheet" href="/styles/components/modal.component.css" />
     <link rel="stylesheet" href="/styles/components/copy.component.css" />
 
@@ -28,13 +57,13 @@
     <script defer src="/scripts/main.js" type="text/javascript"></script>
     <% } %>
 
-    <title>Witzer.io | Encurdator de URL's</title>
+    <title>Witzer.dev | Encurdator de URL's</title>
   </head>
   <body>
     <div class="application-wrapper" data-id="wrapper">
       <div class="home-layout">
         <header class="home-header">
-          <p class="home-header__version" title="Witzer.dev version 1.0 - MVP">
+          <p class="home-header__version" title="Witzer.dev version 1.0">
             Versão 1.0
           </p>
         </header>
@@ -47,7 +76,9 @@
           <div class="shortenner-content">
             <div class="shortenner-content__left">
               <h1 class="shortenner-content__title">
-                Witzer<span class="title-dot">.</span>dev
+                <a href="/" title="Voltar à HOME">
+                  Witzer<span class="title-dot">.</span>dev
+                </a>
               </h1>
 
               <p class="shortener-content__text" title="Witzer.dev: about us">
@@ -112,11 +143,9 @@
               <a
                 href="https://github.com/lucasbernardol/witzer.mini"
                 target="_blank"
+                title="Código fonte"
               >
-                <img
-                  src="/assets/svg/github.svg"
-                  alt="Github logo. See: https://github.com/logos"
-                />
+                <img src="/assets/svg/github.svg" alt="Github logo" />
               </a>
             </li>
           </ul>
@@ -126,7 +155,7 @@
 
     <!-- prettier-ignore -->
     <% if (href) { %>
-      <%- include('./components/modal.ejs', {
+      <%- include('./components/modal.component.ejs', {
           hidden: false, 
           href, 
         }) 

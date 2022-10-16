@@ -1,5 +1,13 @@
 import 'dotenv/config';
 
+import { PORT, DOMAIN } from '@config/env.config';
 import { app } from './app/app';
 
-app.listen(3333, () => console.log('\nOK'));
+/**
+ * Normalize port
+ */
+const _PORT = Number.parseInt(PORT, 10) || 3333;
+
+app.listen(_PORT, () => {
+  console.log(`\nHOST: ${DOMAIN}\nPORT: ${_PORT}`);
+});

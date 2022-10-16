@@ -1,20 +1,19 @@
-.spinner {
+.loading {
   width: 8rem;
   height: 8rem;
 
   border-radius: 50%;
-  border: 3px solid var(--color-line-light);
-
+  border: var(--loading-stroke) solid var(--color-line-light);
   border-top-color: var(--color-primary);
 
-  animation: Loading 0.8s linear infinite;
+  animation: loading 0.8s linear infinite;
 }
 
-.spinner.spinner--dual {
+.loading.loading--double {
   border-bottom-color: var(--color-primary);
 }
 
-@keyframes Loading {
+@keyframes loading {
   0% {
     transform: rotate(0deg);
   }

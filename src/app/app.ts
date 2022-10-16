@@ -23,10 +23,14 @@ app.use(cors());
 app.use(express.static(resolve(__dirname, '..', '..', 'public', 'static')));
 
 app.set('view engine', 'ejs');
-app.set('views', resolve(__dirname, '..', '..', 'public', 'web', 'views'));
+app.set('views', resolve(__dirname, '..', '..', 'public', 'views'));
 
 app.use(morgan('dev'));
 
 app.use(routes);
+
+app.use((request, response, next) => {
+  return response.status(404).render('not-found');
+});
 
 export { app };

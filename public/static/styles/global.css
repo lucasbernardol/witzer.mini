@@ -19,6 +19,8 @@
   --color-notifier-enabled: rgb(10, 185, 77);
   --color-notifier-disabled: rgb(196, 30, 30);
 
+  --loading-stroke: 4px;
+
   font-size: 62.5%;
 }
 

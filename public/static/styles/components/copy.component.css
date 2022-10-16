@@ -21,24 +21,12 @@
   cursor: pointer;
 }
 
-.copy-component i {
-  pointer-events: none;
-  user-select: none;
-
-  opacity: 0.5;
-  transition: 0.2s ease-in;
+.copy-component img {
+  width: 2.6rem;
+  height: 2.6rem;
 }
 
 .copy-component:active,
 .copy-component:focus {
   background-color: #202024;
-}
-
-.copy-component:active i,
-.copy-component:focus i {
-  opacity: 1;
-}
-
-.copy-component:hover i {
-  opacity: 1;
 }

@@ -1,0 +1,79 @@
+.not-found {
+  width: 100%;
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  width: min(100%, 98rem);
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  animation: notFoundDown 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.error__title {
+  font-size: 12.2rem;
+  line-height: 1.2;
+
+  color: var(--color-text);
+}
+
+.error__description {
+  max-width: 70%;
+
+  font-size: 1.8rem;
+  color: var(--color-text-dark);
+
+  line-height: 1.4;
+}
+
+.error__link {
+  width: min(200px, 32rem);
+
+  margin: 2.6rem 0;
+  padding: 1.6rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-primary);
+
+  border-radius: 0.4rem;
+
+  transition: background 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.error__link:hover {
+  background-color: var(--color-primary-hover);
+}
+
+@keyframes notFoundDown {
+  from {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@media (max-width: 720px) {
+  .error {
+    padding: 0;
+  }
+
+  .error__description {
+    max-width: 100%;
+  }
+}
