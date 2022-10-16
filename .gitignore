@@ -10,8 +10,7 @@ lerna-debug.log*
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 *.sqlite
-schema.sqlite
-
+!prisma/sqlite/schema.sqlite
 
 dist/
 build/
