@@ -25,7 +25,7 @@ app.set('view engine', 'ejs');
 app.set('views', (0, _nodePath.resolve)(__dirname, '..', '..', 'public', 'views'));
 app.use((0, _morgan.default)('dev'));
 app.use((request, response, next) => {
-  console.log('__PROTOOL__', request.protocol);
+  console.log('__PROTOOL__', request.protocol, request.get('host'), request.headers['host']);
   
   return next();
 })
